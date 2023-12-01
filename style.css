@@ -1,0 +1,107 @@
+.shared-img{
+  width:250px;
+  border:2px solid #333;
+  padding: 5px;
+  border-radius: 2px;
+
+
+}
+
+
+
+
+
+
+
+#dragandrophandler
+{
+
+border:1px solid ;
+text-align: center;
+width:auto;
+color:#042634;
+height: 100px;
+padding-top: 35px;
+margin-bottom:10px;
+font-size:200%;
+transition: 1s;
+text-align:center;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+#dragandrophandler:hover{background-color: #5A9F28 ; transition: 1s;cursor: pointer;}
+
+.progressBar {
+    width: 200px;
+    height: 22px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    display:inline-block;
+    margin:0px 10px 5px 5px;
+    vertical-align:top;
+}
+
+.img-upload {
+	border-radius: 3px;
+	position: relative;
+	float: left;
+	width:50px;
+	height:50px;
+	border:1px solid #ddd;
+	padding: 5px;
+	cursor: move;
+}
+.image-li{
+	margin-left: 13%;
+	list-style-type: none;
+}
+.progressBar{margin-top: 5px;width: 60px;}
+.progressBar div {
+		text-align: center;
+    height: 100%;
+    color: #fff;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: #5A9F28 ; border-radius: 3px;
+}
+.statusbar
+{
+    border-radius: 5px;
+	  margin: 3px 3px 3px;
+    border:1px solid #ddd;
+    height:auto;
+    padding:10px 10px 0px 10px;
+		display: inline-block;
+
+}
+.statusbar:nth-child(odd){
+
+}
+.filename
+{
+display:inline-block;
+vertical-align:top;
+width:250px;
+}
+.filesize
+{
+display:inline-block;
+vertical-align:top;
+color:#30693D;
+width:100px;
+margin-left:10px;
+margin-right:5px;
+}
+.abort{
+    background-color:#A8352F;
+
+    -webkit-border-radius:4px;
+    border-radius:4px;display:inline-block;
+    color:#fff;
+    font-family:arial;font-size:13px;font-weight:normal;
+    padding:4px 15px;
+    cursor:pointer;
+    vertical-align:top
+    }

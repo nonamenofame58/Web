@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+<link href="style.css" rel="stylesheet">
+<script src="jquery.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<!-- NOTE:
+#DFEFA5 0 green
+#A1C327 1 green
+#5A9F28 2 green
+#0080B3 0 blue
+#042634 1 blue
+-->
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $.get("get.php",function(data){
+      $('#story-line').append(data);
+
+
+    });
+
+
+
+
+
+});
+
+</script>
+
+<style media="screen">
+  .share-header{ background-color:#042634;height: 30px;text-align:center;text-transform: uppercase;position: relative;top:-20px;color:#A1C327}
+  .form-holder{background-color: #0080B3;}
+  .form-holder{padding-bottom: 10px;width:30%;}
+  text{color:#A1C327}
+  .btn{text-transform: uppercase;width: 100%;background-color: #A1C327;margin-top: 20px;border:0.5px solid #5A9F28;overflow: hidden;color:black;font-weight: bold;}
+  .btn:hover{background-color:#5A9F28;transition: 1s;color:black;font-weight: bold;}
+  .story-line{background-color:white;}
+  .stories {background-color: #0080B3;margin-top:20px;width: 80%;margin-left: 10%}
+  .header-uploaded{margin-top: 10px;width:100%;border-bottom: 4px solid #FF8C00;text-align: center;color:#FF8C00 ;font-size:30px;text-transform:  uppercase;font-weight:bold;padding-top: 10px;}
+  .register-class-ul li{list-style-type: none;margin: 15px;}
+  .register-class-ul{padding: 5px;}
+</style>
+<body>
+
+
+
+
+<div class="form-holder">
+  <div class="share-header">
+    <h3 style="font-family: Impact; font-weight: bold;">Paylaşım</h3>
+  </div>
+
+  <form id='share-form' action="connecti.php" method="post" >
+    <!-- NOTE: Başlık -->
+   <div class="input-group">
+     <span class="input-group-addon" style = 'background-color:green;color:white;'><i class="glyphicon glyphicon-fire"></i></span>
+     <input id="header" type="text" class="form-control" name="header" placeholder="Başlık :">
+   </div>
+
+   <!-- NOTE: Adress -->
+   <div class="input-group">
+     <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+     <input id="adress" type="text" class="form-control" name="adress" placeholder="Adres :">
+   </div>
+
+<!-- NOTE: Telefon -->
+   <div class="input-group">
+     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+     <input id="phone" type="text" class="form-control" name="tel" placeholder="Telefon :">
+   </div>
+
+<!-- NOTE: Fiyat -->
+   <div class="input-group">
+     <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
+     <input id="fiyat" type="text" class="form-control" name="price" placeholder="Fiyat :">
+   </div>
+
+   <!-- NOTE: Yorum -->
+
+   <div class="form-group" style = 'margin-top:10px;'>
+    <label for="comment">Açıklama</label>
+    <textarea id='comment' class="form-control" rows="2" id="comment" name = 'comment'></textarea>
+  </div>
+  <div type='file' id="dragandrophandler" >Fotoğraf / Video Yükle</div>
+
+  <!-- NOTE: Button -->
+
+<button  type="submit" class="btn btn-primary">Paylaş</button>
+
+ </form>
+</div>
+
+<!-- NOTE: LOGİN FORM -->
+<div class="login-div">
+  <form class="login-class" action="login.php" method="post">
+    <input type="text" name="id" value="">
+    <input type="password" name="pw" value="">
+    <input type="submit" name="submit" value="Giriş">
+  </form>
+</div>
+
+<!-- NOTE: Register Form -->
+
+<div class="register-div">
+  <form class="register-class" action="register.php" method="post">
+    <ul class = register-class-ul>
+  <li>İsim  :<input type="text" name="reg-id" value=""> </li>
+  <li>Şifre:<input type="password" name="reg-pw" value=""></li>
+  <li>Şifre :<input type="password" name="" value=""></li>
+  <li>E-Mail:<input type="email" name="email" value=""></li>
+  <li> <input type="submit" name="" value="Kayıt Ol"></li>
+
+  </ul>
+  </form>
+
+</div>
+
+
+
+
+
+<div id="story-line" class="story-line">
+</div>
+
+
+
+<form class="" action="fil.php" method="post">
+  <button action='fil.php' method='get' id = 'buttonn'name="buttonn">GET</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
